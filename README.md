@@ -38,10 +38,11 @@ and 'reset' should become selectable checkboxes. Make sure that all of these
 are checked.
 
 Silent Hill 4 speedruns use the in-game timer. To ensure that the in-game time
-is used, set the following options in the layout settings:
+is used, set the following options in the layout settings (if applicable):
 
-* 'Splits > Columns > Column: +/- > Timing Method' = 'Game Time'
-* 'Splits > Columns > Column: Time > Timing Method' = 'Game Time'
+* '(Sub)splits > Columns > Column: +/- > Timing Method' = 'Game Time'
+* '(Sub)splits > Columns > Column: Time > Timing Method' = 'Game Time'
+* 'Subsplits > Section Header > Timing Method' = 'Game Time'
 * 'Timer > Timing Method > Timing Method' = 'Game Time'
 
 Now you can further change the layout settings to your liking. Done.
