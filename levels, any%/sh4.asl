@@ -510,13 +510,13 @@ split
             break;
         case 6:
             // APARTMENT WORLD
-            // Ends when the cutscene in Eileen's room (301) ends.
+            // Ends when the cutscene in Eileen's room (303) ends.
             progress = ((
                     old.currentWorldId == WORLD_APARTMENT &&
-                    old.currentRoomId == APARTMENT__ROOM_301
+                    old.currentRoomId == APARTMENT__ROOM_303
                 ) && !(
                     current.currentWorldId == WORLD_APARTMENT &&
-                    current.currentRoomId == APARTMENT__ROOM_301
+                    current.currentRoomId == APARTMENT__ROOM_303
                 ));
             break;
         case 7:
