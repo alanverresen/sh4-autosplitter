@@ -4,7 +4,7 @@ This repository contains a small collection of auto splitters used by LiveSplit
 for the game 'Silent Hill 4: The Room'.
 
 * a room-based Any% auto splitter
-* a world-based Any% auto splitter (future release)
+* a level-based Any% auto splitter
 
 
 ## Install
