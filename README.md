@@ -21,13 +21,14 @@ Save these files locally, where you can easily access them.
 
 ### Making a New Layout
 
-Start a new layout in LiveSplit, and add the following components:
+Start a new layout in LiveSplit, and make sure to add the following components:
 
 * Timer > (Detailed) Timer
 * List > (Sub)Splits
 * Control > Scriptable Auto Splitter
 
 If the auto splitter uses subsplits, you should use the subsplits component.
+An in-depth can be found below to get you started.
 
 ### Configuration
 
@@ -59,8 +60,8 @@ the upper-right corner of this page. Extracts the files that you need from the
 
 In this guide, we will need the following files:
 
-* *auto splitter script*: <location>/rooms, any%/sh4.asl
-* *splits*: <location>/rooms, any%/Silent Hill 4 The Room - Any%, NTCS-U, PC.lss
+* *auto splitter script*: **<location>/rooms, any%/sh4.asl**
+* *splits*: **<location>/rooms, any%/Silent Hill 4 The Room - Any%, NTCS-U, PC.lss**
 
 #### Step 2: Opening A New Layout In LiveSplit
 
@@ -92,7 +93,9 @@ To load the splits of the room-based auto splitter, do the following:
 
 #### Step 4: Layout Configuration
 
-The layout doesn't look right yet, so we need to configure it further:
+Not only does the current layout of the LiveSplit window look a bit weird, but
+it simply just doesn't work properly at the moment. We need to configure it
+further to use the correct timers, and load the auto splitter script.
 
 1. Right-click anywhere on the LiveSplit window, and select 'Edit Layout...'.
 
@@ -102,13 +105,13 @@ The layout doesn't look right yet, so we need to configure it further:
    and the arrows to move the order of the layout's components. These new
    components are:
    
-        * Timer > (Detailed) Timer
-        * List > Subsplits
-        * Control > Scriptable Auto Splitter
+   * Timer > (Detailed) Timer
+   * List > Subsplits
+   * Control > Scriptable Auto Splitter
    
    The result should look like the image below:
    
-   ![example of layout's components order](assets/install_rooms_step1a.jpg)
+   ![example of layout's components order](assets/install_rooms_step2c.jpg)
 
 3. We need to further configure these individual components, so double-click on
    the 'Layout Settings' in the bottom-left corner.
@@ -116,19 +119,19 @@ The layout doesn't look right yet, so we need to configure it further:
 4. Silent Hill 4 speedruns use the in-game timer instead of using real time, so
    we need to change the timing methods used by our components.
 
-        * 'Subsplits > Section Header > Timing Method' = 'Game Time'
-        * 'Subsplits > Columns > Column: +/- > Timing Method' = 'Game Time'
-        * 'Subsplits > Columns > Column: Time > Timing Method' = 'Game Time'
-        * 'Timer > Timing Method > Timing Method' = 'Game Time'
+   * 'Subsplits > Section Header > Timing Method' = 'Game Time'
+   * 'Subsplits > Columns > Column: +/- > Timing Method' = 'Game Time'
+   * 'Subsplits > Columns > Column: Time > Timing Method' = 'Game Time'
+   * 'Timer > Timing Method > Timing Method' = 'Game Time'
 
     ![subsplits tab](assets/install_rooms_step2d.jpg)
     ![subsplits tab](assets/install_rooms_step2e.jpg)
     ![timer tab](assets/install_rooms_step2f.jpg)
 
-4. Last but not least, we need to load the auto splitter script. In the
-   'Scriptable Auto Splitter' tab, select the auto splitter script. If
-   successfully loaded, the checkboxes should be populated with checkmarks.
-   Otherwise, the checkboxes will stay greyed out.
+4. We also need to load the auto splitter script. In the 'Scriptable Auto
+   Splitter' tab, select the auto splitter script. If successfully loaded, the
+   checkboxes should be populated with checkmarks. Otherwise, the checkboxes
+   will stay greyed out.
    
    ![layout settings](assets/install_rooms_step2h.jpg)
 
@@ -151,4 +154,4 @@ If you do not like the current aesthetic of the LiveSplit window, you can
 further configure the layout in the Layout Settings window that was used
 earlier to change the component's settings.
 
-Don't forget to save your changes, and, done! You are ready to speedrun SH4!
+Don't forget to save your changes, and... done! You are ready to speedrun SH4!
