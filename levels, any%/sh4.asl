@@ -51,15 +51,6 @@
 // thus instead of resetting upon exiting the game, we reset automatically upon
 // starting a new run.
 //
-// PROBLEM: THE LAST SPLIT
-// -----------------------
-// After the final boss fight with Walter Sullivan ends, the room identifiers
-// changes so that we can detect the end of this split. HOWEVER the ingame
-// timer keeps running for another 0.5 seconds at the beginning of the cutscene.
-// 
-// To handle this case, the final split does not 
-//
-//
 
 
 ///////////////////////////////////////////////////////////////////////////////

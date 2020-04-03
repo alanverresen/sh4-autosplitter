@@ -34,14 +34,14 @@ Default'. The new LiveSplit window should look something like this:
 
 #### Step 3: Adding Splits
 
-To load the splits of the room-based auto splitter, do the following:
+To load the splits of the level-based auto splitter, do the following:
 
 1. Right-click anywhere on the LiveSplit window, and select 'Open Splits > From
    File'.
 
    ![open file browser to select splits](assets/install_rooms_step1a.jpg)
 
-2. Select the file containing the splits for the room-based auto splitter.
+2. Select the file containing the splits for the level-based auto splitter.
 
    ![select file containing splits in file browser](assets/install_rooms_step1b.jpg)
 
@@ -65,7 +65,7 @@ use the correct timers, and load the auto splitter script.
    that we will need are:
    
    * Timer > (Detailed) Timer
-   * List > Subsplits
+   * List > Splits
    * Control > Scriptable Auto Splitter
    
    The result should look like the image below:
@@ -80,9 +80,8 @@ use the correct timers, and load the auto splitter script.
 4. Silent Hill 4 speedruns use the in-game timer instead of using real time, so
    we need to change the timing methods used by our components.
 
-   * 'Subsplits > Section Header > Timing Method' = 'Game Time'
-   * 'Subsplits > Columns > Column: +/- > Timing Method' = 'Game Time'
-   * 'Subsplits > Columns > Column: Time > Timing Method' = 'Game Time'
+   * 'Splits > Columns > Column: +/- > Timing Method' = 'Game Time'
+   * 'Splits > Columns > Column: Time > Timing Method' = 'Game Time'
    * 'Timer > Timing Method > Timing Method' = 'Game Time'
 
     ![subsplits tab](assets/install_rooms_step2d.jpg)
