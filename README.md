@@ -9,10 +9,10 @@ for the game 'Silent Hill 4: The Room'.
 
 ## Installation Guides
 
-You can use one of the following guides to set up an auto splitter:
+You can use one of the following guides to install one of the auto splitters:
 
-* [room-based](./docs/rooms_setup.md) Any% auto splitter
-* [level-based](./docs/levels_setup.md) Any% auto splitter
+* [room-based Any% auto splitter](./docs/rooms_setup.md)
+* [level-based Any% auto splitter](./docs/levels_setup.md)
 
 
 ## Version History
@@ -21,7 +21,7 @@ You can use one of the following guides to set up an auto splitter:
 
 - added versions to each script
 - last split is now delayed to include changes to ingame timer in last cutscene
-- added two separate installatino guides in a separate subdirectory
+- added two separate installation guides in a separate subdirectory
 
 ### Version 1.0.1 (2020 FEB 04)
 
