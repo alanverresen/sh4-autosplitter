@@ -84,9 +84,8 @@ use the correct timers, and load the auto splitter script.
    * 'Splits > Columns > Column: Time > Timing Method' = 'Game Time'
    * 'Timer > Timing Method > Timing Method' = 'Game Time'
 
-    ![subsplits tab](assets/install_levels_step2d.jpg)
-    ![subsplits tab](assets/install_levels_step2f.jpg)
-    ![timer tab](assets/install_levels_step2g.jpg)
+    ![splits tab](assets/install_levels_step2d.jpg)
+    ![timer tab](assets/install_levels_step2f.jpg)
 
 4. We also need to load the auto splitter script. In the 'Scriptable Auto
    Splitter' tab, click the browse button, and select the auto splitter script's
