@@ -1,6 +1,18 @@
 # Installation Guide: Any% Room-Based Auto Splitter
 
-#### Step 1: Downloading Auto Splitter
+## Step 1: Downloading Auto Splitter
+
+To use one of these auto splitters with LiveSplit, extract the files from one
+of the subdirectories to get started. Each subdirectory should contain:
+
+* an *.asl file that contains the auto splitter script
+* an *.lss file that contains the splits that go with the auto splitter script
+
+Save these files locally, where you can easily access them. In this guide, we
+will need the following files:
+
+* **<location>/rooms, any%/sh4.asl**
+* **<location>/rooms, any%/Silent Hill 4 The Room - Any%, NTCS-U, PC.lss**
 
 You can download a copy of this repository by clicking the download button in
 the upper-right corner of this page. Extracts the files that you need from the 
@@ -8,12 +20,8 @@ the upper-right corner of this page. Extracts the files that you need from the
 
 ![Download Files By Clicking On Download ZIP Button.](assets/download_files.jpg)
 
-In this guide, we will need the following files:
 
-* *auto splitter script*: **<location>/rooms, any%/sh4.asl**
-* *splits*: **<location>/rooms, any%/Silent Hill 4 The Room - Any%, NTCS-U, PC.lss**
-
-#### Step 2: Opening A New Layout In LiveSplit
+## Step 2: Opening A New Layout In LiveSplit
 
 The first step in creating a new layout is opening LiveSplit. LiveSplit will
 load a fresh default layout if it is your first time using LiveSplit. If it is
@@ -24,7 +32,7 @@ Default'. The new LiveSplit window should look something like this:
 ![Opening A New Default Layout](assets/install_rooms_step0.jpg)
 
 
-#### Step 3: Adding Splits
+## Step 3: Adding Splits
 
 To load the splits of the room-based auto splitter, do the following:
 
@@ -41,7 +49,8 @@ To load the splits of the room-based auto splitter, do the following:
 
    ![LiveSplit window with splits loaded](assets/install_rooms_step1c.jpg)
 
-#### Step 4: Layout Configuration
+
+## Step 4: Layout Configuration
 
 Not only does the current layout of the LiveSplit window look a bit weird, but
 it also doesn't work properly at the moment. We need to configure it further to
@@ -88,7 +97,7 @@ use the correct timers, and load the auto splitter script.
    ![layout settings](assets/install_rooms_step2h.jpg)
 
 
-#### Step 5: Save Settings
+## Step 5: Save Settings
 
 After successfully loading our splits, and correctly configuring the layout of
 our LiveSplit window, we should save the settings.
@@ -101,7 +110,7 @@ layout.
 ![save settings](assets/install_rooms_step3b.jpg)
 
 
-#### Step 6: Configure LiveSplit Window Further
+## Step 6: Configure LiveSplit Window Further
 
 If you do not like the current aesthetic of the LiveSplit window, you can
 further configure the layout in the Layout Settings window that was used

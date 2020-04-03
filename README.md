@@ -9,7 +9,7 @@ for the game 'Silent Hill 4: The Room'.
 
 ## Installation Guides
 
-You can use one of the following guides to install one of the auto splitters:
+You can use the following guides to install one of the auto splitters:
 
 * [room-based Any% auto splitter](./docs/rooms_setup.md)
 * [level-based Any% auto splitter](./docs/levels_setup.md)
