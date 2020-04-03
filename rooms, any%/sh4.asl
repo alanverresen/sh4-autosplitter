@@ -2,6 +2,8 @@
 // sh4.asl
 ///////////////////////////////////////////////////////////////////////////////
 
+// VERSION 1.1.0
+
 // This script is used by LiveSplit for the game "Silent Hill 4: The Room" to
 // automatically split upon leaving each room in an NTSC-U Any% PC speedrun.
 
@@ -205,6 +207,7 @@ gameTime
 startup
 {
    vars.currentSegment = 0;
+   vars.walterSplitPostponeFramesCounter = 0;
 }
 
 
@@ -221,6 +224,7 @@ update
     // reset variables when starting a new run
     if (current.inGameTimer == 0) {
         vars.currentSegment = 0;
+        vars.walterSplitPostponeFramesCounter = 0;
     }
 }
 
@@ -3039,9 +3043,47 @@ split
             // WARNING: luckily, the room identifier changes after defeating
             // Walter, so we are able to do the final split easily.
             progress = (
+                old.currentWorldId == WORLD_THE_END &&
+                old.currentRoomId == THE_END__BOSS_ROOM &&
                 current.currentWorldId == WORLD_THE_END &&
                 current.currentRoomId != THE_END__BOSS_ROOM);
-            break;
+
+            // ----------------------------------------------------------------
+            // BUG FIX #1
+            // ----------------------------------------------------------------
+            //
+            // [PROBLEM]
+            // At the beginning of the last cutscene, the ingame timer resumes
+            // and runs for another half second or so. This time needs to be
+            // added to the game's timer.
+            //
+            // [FIX]
+            // We overwrite the local progress variable unless we have counted
+            // that enough frames have past since the room identifiers have
+            // changed to be sure that the timer has completely stopped.
+            //
+            // ----------------------------------------------------------------
+
+            if (progress) {
+                // only executed when the room identifiers just changed
+                progress = false;
+                vars.walterSplitPostponeFramesCounter = 1;
+            }
+            else if (vars.walterSplitPostponeFramesCounter < 600) {
+                // executed until enough frames have been counted
+                progress = false;
+                vars.walterSplitPostponeFramesCounter += 1;
+            }
+            else {
+                // executed when enough frames have been counted
+                progress = true;
+                vars.walterSplitPostponeFramesCounter = 0;
+            }
+
+            // ----------------------------------------------------------------
+            // END OF BUG FIX #1
+            // ----------------------------------------------------------------
+
         case THE_END_SPLITS_BASE + 2:
             // FINISHED
             // Enjoy the credits.

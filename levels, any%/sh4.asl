@@ -2,6 +2,8 @@
 // sh4.asl
 ///////////////////////////////////////////////////////////////////////////////
 
+// VERSION 1.1.0
+
 // This script is used by LiveSplit for the game "Silent Hill 4: The Room" to
 // automatically split upon leaving each world in an NTSC-U Any% PC speedrun.
 
@@ -48,6 +50,15 @@
 // memory. At the same time, we can easily determine when a new run starts, and
 // thus instead of resetting upon exiting the game, we reset automatically upon
 // starting a new run.
+//
+// PROBLEM: THE LAST SPLIT
+// -----------------------
+// After the final boss fight with Walter Sullivan ends, the room identifiers
+// changes so that we can detect the end of this split. HOWEVER the ingame
+// timer keeps running for another 0.5 seconds at the beginning of the cutscene.
+// 
+// To handle this case, the final split does not 
+//
 //
 
 
@@ -123,6 +134,7 @@ gameTime
 startup
 {
    vars.currentSegment = 0;
+   vars.walterSplitPostponeFramesCounter = 0;
 }
 
 
@@ -139,6 +151,7 @@ update
     // reset variables when starting a new run
     if (current.inGameTimer == 0) {
         vars.currentSegment = 0;
+        vars.walterSplitPostponeFramesCounter = 0;
     }
 }
 
@@ -589,6 +602,43 @@ split
                 old.currentRoomId == THE_END__BOSS_ROOM &&
                 current.currentWorldId == WORLD_THE_END &&
                 current.currentRoomId != THE_END__BOSS_ROOM);
+            
+            // ----------------------------------------------------------------
+            // BUG FIX #1
+            // ----------------------------------------------------------------
+            //
+            // [PROBLEM]
+            // At the beginning of the last cutscene, the ingame timer resumes
+            // and runs for another half second or so. This time needs to be
+            // added to the game's timer.
+            //
+            // [FIX]
+            // We overwrite the local progress variable unless we have counted
+            // that enough frames have past since the room identifiers have
+            // changed to be sure that the timer has completely stopped.
+            //
+            // ----------------------------------------------------------------
+
+            if (progress) {
+                // only executed when the room identifiers just changed
+                progress = false;
+                vars.walterSplitPostponeFramesCounter = 1;
+            }
+            else if (vars.walterSplitPostponeFramesCounter < 600) {
+                // executed until enough frames have been counted
+                progress = false;
+                vars.walterSplitPostponeFramesCounter += 1;
+            }
+            else {
+                // executed when enough frames have been counted
+                progress = true;
+                vars.walterSplitPostponeFramesCounter = 0;
+            }
+
+            // ----------------------------------------------------------------
+            // END OF BUG FIX #1
+            // ----------------------------------------------------------------
+            
             break;
         case 16:
             // FINISHED
